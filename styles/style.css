@@ -1,6 +1,6 @@
 :root {
   --main-font: raleway;
-  --accent-font: 'STIX Two Text';
+  --accent-font: "STIX Two Text";
   --bg-color: #f3efec;
   --text-color: #312a4e;
   --accent-color: #ffab6b;
@@ -21,8 +21,10 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
-  color: var(--text-color, #312a4e);
+
   font-family: var(--main-font, sans-serif);
+  color: var(--text-color, #312a4e);
+
   background-color: var(--bg-color, #f3efec);
 }
 
@@ -45,7 +47,7 @@ button:focus {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 1px solid currentColor;
+  outline: 1px solid currentcolor;
 }
 
 button:disabled {
@@ -59,7 +61,7 @@ button:disabled {
 .heading {
   font-family: var(--accent-font, serif);
   font-weight: 600;
-  line-height: .9;
+  line-height: 0.9;
   text-align: center;
 }
 
@@ -69,11 +71,12 @@ button:disabled {
 
 .header__menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-block-start: 1px solid currentColor;
-  border-block-end: 1px solid currentColor;
+  justify-content: space-between;
+
   padding-block: 20px;
+  border-block-start: 1px solid currentcolor;
+  border-block-end: 1px solid currentcolor;
 }
 
 .header__theme-toggler {
@@ -84,14 +87,18 @@ button:disabled {
 }
 
 .header__theme-button {
+  cursor: pointer;
+
   position: relative;
-  border: none;
+
   padding: 0;
-  color: currentColor;
+  border: none;
+
   font-family: inherit;
   font-size: 18px;
+  color: currentcolor;
+
   background-color: transparent;
-  cursor: pointer;
 }
 
 .header__theme-button:hover {
@@ -103,14 +110,17 @@ button:disabled {
 }
 
 .header__theme-button_is-active::after {
-  content: '';
+  content: "";
+
   position: absolute;
   z-index: -1;
-  inline-size: calc(100% + 8px);
-  block-size: .5ch;
-  background-color: var(--accent-color);
-  inset-block-end: .3ch;
+  inset-block-end: 0.3ch;
   inset-inline-start: -4px;
+
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+
+  background-color: var(--accent-color);
 }
 
 .header__title {
@@ -156,25 +166,31 @@ button:disabled {
 }
 
 .content__list li::before {
-  content: '';
+  content: "";
+
   position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: -25px;
+
   inline-size: 15px;
   block-size: 15px;
   margin-block-start: -7.5px;
-  background-image: url(../images/marker-light.svg);
+
+  background-image: url("../images/marker-light.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  inset-block-start: 50%;
-  inset-inline-start: -25px;
 }
 
 .content__text-block_type_first-letter .content__paragraph:first-of-type::first-letter {
   display: inline-block;
+
   margin-inline-end: 1px;
   padding: 0 4px;
-  font-weight: 700;
+
   font-size: 30px;
+  font-weight: 700;
+
   background-color: var(--accent-color);
 }
 
@@ -184,14 +200,14 @@ button:disabled {
 
 .content__figure {
   position: relative;
+  inset-inline-end: 5vi;
   inline-size: calc(100% + 10vi);
   margin: 7% auto 0;
-  inset-inline-end: 5vi;
 }
 
 .content__picture-caption {
-  border-block-end: 1px solid currentColor;
   padding: 20px;
+  border-block-end: 1px solid currentcolor;
   font-size: 18px;
   text-align: center;
 }
@@ -199,11 +215,12 @@ button:disabled {
 .content__card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-block-start: 7%;
-  border: 1px solid currentColor;
+  justify-content: center;
+
   aspect-ratio: 4/3;
+  margin-block-start: 7%;
+  border: 1px solid currentcolor;
 }
 
 .content__card-title {
@@ -216,24 +233,27 @@ button:disabled {
 
 .colored-text {
   position: relative;
-  display:inline-block;
+  display: inline-block;
 }
 
 .colored-text::after {
-  content: '';
+  content: "";
+
   position: absolute;
   z-index: -1;
-  inline-size: calc(100% + 8px);
-  block-size: .5ch;
-  background-color: var(--accent-color);
-  inset-block-end: .3ch;
+  inset-block-end: 0.3ch;
   inset-inline-start: -4px;
+
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+
+  background-color: var(--accent-color);
 }
 
 .footer {
   margin-block-start: 10%;
-  border-block-start: 1px solid currentColor;
   padding: 2.5%;
+  border-block-start: 1px solid currentcolor;
   text-align: center;
 }
 
@@ -242,17 +262,17 @@ button:disabled {
 }
 
 .theme_dark .colored-text::after {
-  background-image: url(../images/pattern.svg);
+  background-image: url("../images/pattern.svg");
 }
 
 .theme_dark .header__theme-button_is-active::after {
-  background-image: url(../images/pattern.svg);
+  background-image: url("../images/pattern.svg");
 }
 
 .theme_dark .content__text-block_type_first-letter .content__paragraph:first-of-type::first-letter {
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
 }
 
 .theme_dark .content__list li::before {
-  background-image: url(../images/marker-dark.svg);
+  background-image: url("../images/marker-dark.svg");
 }
